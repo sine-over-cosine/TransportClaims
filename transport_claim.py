@@ -26,9 +26,9 @@ def compute_cost(seq_of_data):
 import numpy as np
 def unreturned_claims(data):
     file = open("report.txt","w")
-    permutes = it.combinations(data,8)
+    combi = it.combinations(data,8)
     left = total-obtained
-    for u in permutes:
+    for u in combi:
         cost_= np.round(compute_cost(u),2)
         if abs(compute_cost(u)-left)<0.01 :
             file.write("****************\n")
